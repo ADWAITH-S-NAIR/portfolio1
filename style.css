@@ -465,21 +465,51 @@ html {
 
 .experience-item {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
     margin: 20px 0;
+    flex-wrap: wrap;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.experience-item:last-child {
+    border-bottom: none;
 }
 
 .experience-title {
+    flex: 1 1 64%;
     display: block;
     font-size: 18px;
     font-weight: bold;
     color: #fff;
+    line-height: 1.4;
 }
 
 .experience-date {
+    flex: 0 0 auto;
     display: block;
     font-size: 16px;
     color: #ccc;
+    text-align: right;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .experience-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .experience-date {
+        text-align: left;
+        white-space: normal;
+        margin-top: 6px;
+    }
+
+    .experience-title {
+        flex: 1 1 100%;
+    }
 }
 
