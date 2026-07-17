@@ -435,13 +435,15 @@ html {
 
 
 #experience{
-
     text-align: center;
     color: white;
-    font-size: 50px;
     margin: 0;
 }
 
+#experience h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
 
 .experience-section{
     width: calc(100% );
@@ -455,9 +457,29 @@ html {
 
 .experience-section h4{
     color: rgb(247, 63, 63);
-    font-size: 25px;
+    font-size: 22px;
     margin: 0;
     text-align: center;
     padding: 10px;
+}
+
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 20px 0;
+}
+
+.experience-title {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.experience-date {
+    display: block;
+    font-size: 16px;
+    color: #ccc;
 }
 
