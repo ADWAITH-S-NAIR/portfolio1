@@ -513,3 +513,41 @@ html {
     }
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 300px;
+}
+/* Desktop */
+h1 {
+    font-size: 48px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+}
+
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+}
