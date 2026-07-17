@@ -333,10 +333,19 @@ a {
 .home{
     flex-direction:column;
     text-align:center;
+    padding: 150px 5% 50px;
 }
 
 .home-info{
     order:2;
+}
+
+.home-info h1 {
+    font-size: 40px;
+}
+
+.home-info h2 {
+    font-size: 25px;
 }
 
 .home-img{
@@ -348,14 +357,44 @@ a {
     height:300px;
 }
 
-.navbar ul{
-    gap:1px;
+.navbar {
+    padding: 15px 5%;
+    flex-direction: column;
+    gap: 15px;
 }
+
+.navbar ul{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.navbar ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.experience-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.experience-date {
+    margin-left: 0;
+    text-align: left;
+}
+
+.python-icon, .js-icon, .java-icon, .css-icon, .html-icon {
+    margin: 10px !important;
+}
+
 }
 
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 
@@ -419,6 +458,7 @@ html {
     display: flex;
     gap: 40px; /* Space between boxes */
     justify-content: center; /* Center the boxes horizontally */
+    flex-wrap: wrap;
 }
 .box {
     background-color: black;
@@ -460,3 +500,28 @@ html {
     padding: 10px;
 }
 
+.experience-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+    font-size: 16px;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.experience-title {
+    text-align: left;
+    font-weight: bold;
+    flex: 1;
+}
+
+.experience-date {
+    text-align: right;
+    color: red;
+    white-space: nowrap;
+    margin-left: 20px;
+}
