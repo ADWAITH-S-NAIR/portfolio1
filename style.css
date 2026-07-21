@@ -1,8 +1,19 @@
 /* Google Font */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
 body {
     margin: 0;
     font-family: "Gruppo", sans-serif;
     background: #000;
+    color: #fff;
+    overflow-x: hidden;
 }
 
 /* Links */
@@ -582,5 +593,198 @@ html {
 /* Optional: Change text color for active item */
 .navbar a.active {
     color: #ff4d4d;
+}
+
+/* Responsive layout for all devices */
+section {
+    scroll-margin-top: 100px;
+}
+
+.home,
+#contact,
+.skills-section,
+.contact,
+.experience-section,
+.education-section {
+    width: min(100%, 1200px);
+    margin: 0 auto;
+}
+
+.home {
+    padding: clamp(100px, 10vw, 140px) 5% 60px;
+}
+
+.home-info h1 {
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+}
+
+.home-info h2 {
+    font-size: clamp(1.4rem, 3.3vw, 2.2rem);
+}
+
+.home-info p {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    max-width: 700px;
+}
+
+.home-info .btn-sci {
+    justify-content: flex-start;
+}
+
+.img-box {
+    width: min(80vw, 420px);
+    height: min(80vw, 420px);
+}
+
+@media (max-width: 900px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px;
+    }
+
+    .home-info {
+        order: 2;
+    }
+
+    .home-img {
+        order: 1;
+    }
+
+    .home-info .btn-sci {
+        justify-content: center;
+    }
+
+    .sci {
+        justify-content: center;
+    }
+
+    .navbar {
+        padding: 18px 5%;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .navbar ul {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px 12px;
+    }
+
+    .navbar ul li {
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .logo {
+        font-size: 1.4rem;
+    }
+
+    .navbar ul li a {
+        font-size: 0.95rem;
+    }
+
+    .home {
+        padding: 120px 5% 40px;
+    }
+
+    .img-box {
+        width: min(70vw, 300px);
+        height: min(70vw, 300px);
+    }
+
+    .skills-section,
+    .contact,
+    .experience-section,
+    .education-section {
+        padding: 24px 5%;
+        margin: 24px auto;
+    }
+
+    .container {
+        gap: 12px;
+    }
+
+    .box {
+        width: clamp(80px, 22vw, 110px);
+        padding: 10px 8px;
+    }
+
+    .box1 {
+        width: min(90%, 250px);
+    }
+
+    .experience-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .experience-title {
+        font-size: clamp(0.95rem, 3vw, 1.05rem);
+    }
+
+    .experience-date {
+        text-align: left;
+        white-space: normal;
+        margin-top: 6px;
+    }
+
+    #contact h2 {
+        font-size: clamp(1.8rem, 5vw, 2.4rem);
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .html-icon,
+    .python-icon,
+    .js-icon,
+    .java-icon,
+    .css-icon {
+        margin: 0 10px;
+        font-size: clamp(2rem, 6vw, 3rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 14px 4%;
+    }
+
+    .navbar ul {
+        gap: 6px 10px;
+    }
+
+    .navbar ul li a {
+        font-size: 0.9rem;
+        padding: 4px 0;
+    }
+
+    .home-info h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    .sci a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 0.95rem;
+    }
 }
 
