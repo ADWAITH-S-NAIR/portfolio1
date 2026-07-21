@@ -496,6 +496,22 @@ html {
     white-space: nowrap;
 }
 
+#education{
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+.education-section{
+    width: calc(100% );
+    margin: 40px auto;
+    padding: 30px;
+    border: 2px solid rgb(54, 51, 51);
+    border-radius: 10px;
+    background: black;
+    box-sizing: border-box;
+}
+
+
 @media (max-width: 768px) {
     .experience-item {
         flex-direction: column;
@@ -527,27 +543,44 @@ html {
 .card {
     flex: 1 1 300px;
 }
-/* Desktop */
-h1 {
-    font-size: 48px;
-}
-
-/* Tablet */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 36px;
-    }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 28px;
-    }
-}
 
 
-button {
-    padding: 12px 24px;
-    font-size: 16px;
+
+/* Navbar Links */
+.navbar a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
 }
+
+/* Underline (hidden by default) */
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;      /* Distance below the text */
+    width: 100%;
+    height: 3px;
+    background: red;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+/* Show underline on hover */
+.navbar a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Keep underline on active section */
+.navbar a.active::after {
+    transform: scaleX(1);
+}
+
+/* Optional: Change text color for active item */
+.navbar a.active {
+    color: #ff4d4d;
+}
+
