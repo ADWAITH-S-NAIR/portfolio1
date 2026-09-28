@@ -212,19 +212,49 @@ textarea {
     max-width: 540px;
 }
 
-.home-img img {
+.portrait-frame {
+    position: relative;
+    width: min(100%, 480px);
+    padding: 14px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, rgba(255, 77, 77, 0.32), rgba(255, 255, 255, 0.04));
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.portrait-frame::before {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    pointer-events: none;
+}
+
+.portrait-frame:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(255, 77, 77, 0.8);
+    box-shadow: 0 30px 70px rgba(255, 77, 77, 0.18);
+}
+
+.portrait-frame img {
     width: 100%;
-    max-width: 520px;
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     object-position: center;
-    border-radius: 28px;
+    border-radius: 22px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     background: transparent;
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
-    padding: 0;
     display: block;
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.portrait-frame:hover img {
+    transform: rotate(-1deg) scale(1.03);
+    filter: saturate(1.1);
 }
 
 .eyebrow {
@@ -264,8 +294,8 @@ textarea {
     display: inline-block;
     color: transparent;
     -webkit-text-stroke: 1px var(--primary);
-    animation: fadeCycle 14s linear infinite;
-    animation-delay: calc(var(--i) * -3s);
+    animation: fadeCycle 7s linear infinite;
+    animation-delay: calc(var(--i) * -1.75s);
 }
 
 .home-info p {
@@ -417,6 +447,8 @@ textarea {
 }
 
 .project-card {
+    display: flex;
+    flex-direction: column;
     padding: 1.5rem;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.02);
@@ -428,6 +460,42 @@ textarea {
 .project-card:hover {
     transform: translateY(-4px);
     border-color: rgba(255, 77, 77, 0.5);
+}
+
+.project-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+.project-github,
+.project-vercel {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    color: var(--text);
+    transition: var(--transition);
+}
+
+.project-github:hover,
+.project-vercel:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 77, 77, 0.2);
+}
+
+.project-github i,
+.project-vercel i {
+    font-size: 1.15rem;
 }
 
 .project-tag {
@@ -711,10 +779,10 @@ textarea {
 }
 
 @keyframes fadeCycle {
-    0%, 25%, 100% {
+    0%, 20%, 100% {
         opacity: 0;
     }
-    35%, 60% {
+    30%, 55% {
         opacity: 1;
     }
 }
