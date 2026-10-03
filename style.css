@@ -212,7 +212,6 @@ textarea {
     max-width: 540px;
 }
 
-<<<<<<< HEAD
 .portrait-frame {
     position: relative;
     width: min(100%, 480px);
@@ -242,16 +241,10 @@ textarea {
 
 .portrait-frame img {
     width: 100%;
-=======
-.home-img img {
-    width: 100%;
-    max-width: 520px;
->>>>>>> 6a72bf5 (Resolve portfolio merge and add Driver Monitoring System card)
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     object-position: center;
-<<<<<<< HEAD
     border-radius: 22px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     background: transparent;
@@ -262,14 +255,6 @@ textarea {
 .portrait-frame:hover img {
     transform: rotate(-1deg) scale(1.03);
     filter: saturate(1.1);
-=======
-    border-radius: 28px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: transparent;
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
-    padding: 0;
-    display: block;
->>>>>>> 6a72bf5 (Resolve portfolio merge and add Driver Monitoring System card)
 }
 
 .eyebrow {
@@ -372,15 +357,6 @@ textarea {
     border-color: var(--primary);
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(255, 77, 77, 0.25);
-}
-
-.home-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 0.9;
-    min-width: 240px;
-    max-width: 540px;
 }
 
 .section-wrapper {
